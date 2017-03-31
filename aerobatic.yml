@@ -1,0 +1,17 @@
+id: 5da5cbed-d925-4498-b530-26e9c75bcaed
+deploy:
+  ignore: []
+  directory: .
+plugins:
+  - name: form-submit
+    path: /contact-us
+    method: post
+    options:
+      recaptchaSecret: $RECAPTCHA_SECRET_KEY
+  - name: form-submit
+    path: form-submit-ajax
+    method: post
+    options:
+      recaptchaSecret: $RECAPTCHA_SECRET_KEY
+
+  - name: webpage

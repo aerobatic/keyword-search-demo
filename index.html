@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Aerobatic Form Submit Demo</title>
+  <meta name="description" content="This demo shows how to use the Aerobatic form-submit plugin">
+  <meta name="author" content="Aerobatic">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href='//fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="/css/normalize.css">
+  <link rel="stylesheet" href="/css/skeleton.css">
+  <link rel="stylesheet" href="/css/custom.css">
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+</head>
+<body class="code-snippets-visible">
+  <div class="navbar-spacer"></div>
+  <nav class="navbar">
+    <div class="container">
+      <a href="https://www.aerobatic.com"><img src="https://www.aerobatic.com/media/aerobatic-header-logo.png"></a>
+    </div>
+  </nav>
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="container">
+    <section class="header">
+      <h1 class="title">Form Submit Demo</h1>
+    </section>
+
+    <!-- Why use Skeleton -->
+    <div class="docs-section" id="intro">
+      <p>
+        The Aerobatic form-submit plugin is an easy way to add form handling to your static site &mdash; perfect for contact forms, email subscribes, simple surveys, etc.
+        Aerobatic stores your form submissions in a database that you an view in the dashboard. You can also configure
+        that form submissions trigger other actions such as sending the form contents via email or posting to a webhook.
+      </p>
+      <p>
+        Forms are required to have a <a href="https://www.google.com/recaptcha/intro/">ReCAPTCHA</a> for spam prevention. The Aerobatic server will validate the recaptcha code with Google behind the scenes.
+      </p>
+      <p>
+        Read the <a href="https://www.aerobatic.com/docs/plugins/form-submit/">full documentation</a> or view the <a href="https://github.com/aerobatic/form-submit-demo">source code</a> for this demo.
+      </p>
+    </div>
+
+    <!-- Example -->
+    <div class="docs-section examples" id="examples">
+      <h6 class="docs-header">Example</h6>
+      <div class="row example">
+          <p>There are different ways to use the plugin &mdash; a standard form that POSTs the whole page and redirects to a URL of your choosing, or you can use JavaScript and AJAX to post the form and stay on the same page.</p>
+          <p>
+            <a class="button button-primary" href="/standard-form.html" role="button">Standard form</a>
+            <a class="button button-primary" href="/ajax-form.html" role="button">AJAX form</a>
+          </p>
+          <p>To implement the form-submit plugin in your website, see the Aerobatic <a href="https://www.aerobatic.com/docs/plugins/form-submit/">documentation</a>.</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
