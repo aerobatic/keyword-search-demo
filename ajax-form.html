@@ -41,7 +41,7 @@
     <!-- Why use Skeleton -->
     <div class="docs-section" id="intro">
       <p>
-        This simple contact form demonstrates how to add form handling to your static Aerobatic website.
+        This simple contact form demonstrates how to add AJAX form handling to your static Aerobatic website. It's important that the AJAX call pass the value <strong>application/json</strong> for the <strong>Accepts</strong> header.
       </p>
     </div>
 
@@ -74,25 +74,44 @@
             data-size="invisible">
           </div>
         </form>
+        <div id="thankYou" style="display:none;"> 
+          <h4>Thank you for your interest. Someone will be in touch with you soon</h4>
+        </div>
       </div>
     </div>
   </div>
   
-  <!-- Scripts
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   <script>
     function onSubmitForm(event) {
-      // Allow for client validation to happen before the recaptcha
-      console.log('executing recaptcha');
       grecaptcha.execute();
       event.preventDefault();
     }
 
     function recaptchaOnSubmit(token) {
-      // Now submit the form
-      document.getElementById('demoForm').submit();
+      var demoForm = $('#demoForm');
+
+      // Submit the form via ajax
+      $.ajax({
+        url: demoForm.attr('action'), 
+        method: 'POST',
+        data: demoForm.serialize(),
+        // This causes Accepts header to be application/json
+        dataType: "json",
+        success: function() {
+          // Replace the form with a thank you message
+          demoForm.hide();
+          $('#thankYou').show();
+        },
+        error: function() {
+          // Replace the form with a thank you message
+          demoForm.hide();
+          $('#thankYou').show();
+        }
+      });
     }
-    document.getElementById('demoForm').addEventListener('submit', onSubmitForm);
+    
+    $('#demoForm').on('submit', onSubmitForm);
   </script>
   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </body>

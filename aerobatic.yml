@@ -7,11 +7,22 @@ plugins:
     path: /contact-us
     method: post
     options:
+      formName: contact-us
+      redirectUrl: /thank-you
       recaptchaSecret: $RECAPTCHA_SECRET_KEY
+      targets:
+        email:
+          subject: Demo contact-form submission
+          recipients: [your-email@email.com]
   - name: form-submit
     path: form-submit-ajax
     method: post
     options:
+      formName: contact-us-ajax
       recaptchaSecret: $RECAPTCHA_SECRET_KEY
+      targets:
+        email:
+          subject: Demo contact-form submission
+          recipients: [your-email@email.com]
 
   - name: webpage
