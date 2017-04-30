@@ -1,31 +1,13 @@
-id: 5da5cbed-d925-4498-b530-26e9c75bcaed
+id: a2415521-b77c-49ec-b2aa-48f60445f14c
 deploy:
   ignore: []
   directory: .
 plugins:
-  - name: form-submit
-    path: /contact-us
-    method: post
-    options:
-      formName: contact-us
-      redirectUrl: /thank-you
-      recaptchaSecret: $RECAPTCHA_SECRET_KEY
-      targets:
-        - name: email
-          subject: Demo contact-form submission
-          recipients: [your-email@email.com]
-        - name: webhook
-          url: $ZAP_GSHEET_WEBHOOK_URL
-  - name: form-submit
-    path: form-submit-ajax
-    method: post
-    options:
-      formName: contact-us-ajax
-      recaptchaSecret: $RECAPTCHA_SECRET_KEY
-      targets:
-        - name: email
-          subject: Demo contact-form submission
-          recipients: [your-email@email.com]
-        - name: webhook
-          url: $ZAP_GSHEET_WEBHOOK_URL
+  - name: keyword-search
+    path: /search
+    method: get
   - name: webpage
+
+scanner:
+  keywordSearch:
+    siteMapPath: /sitemap

@@ -5,8 +5,8 @@
   <!-- Basic Page Needs
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
-  <title>Aerobatic Form Submit Demo</title>
-  <meta name="description" content="This demo shows how to use the Aerobatic form-submit plugin">
+  <title>Aerobatic Keyword Search Demo</title>
+  <meta name="description" content="This demo shows how to use the Aerobatic keyword-search plugin">
   <meta name="author" content="Aerobatic">
 
   <!-- Mobile Specific Metas
@@ -29,7 +29,7 @@
   <div class="navbar-spacer"></div>
   <nav class="navbar">
     <div class="container">
-      <a href="https://www.aerobatic.com"><img src="https://www.aerobatic.com/media/aerobatic-header-logo.png"></a>
+      <a href="/"><img src="https://www.aerobatic.com/media/aerobatic-header-logo.png"></a>
     </div>
   </nav>
 
@@ -37,21 +37,16 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <div class="container">
     <section class="header">
-      <h1 class="title">Form Submit Demo</h1>
+      <h1 class="title">Keyword Search Demo</h1>
     </section>
 
     <!-- Why use Skeleton -->
     <div class="docs-section" id="intro">
       <p>
-        The Aerobatic form-submit plugin is an easy way to add form handling to your static site &mdash; perfect for contact forms, email subscribes, simple surveys, etc.
-        Aerobatic stores your form submissions in a database that you an view in the dashboard. You can also configure
-        that form submissions trigger other actions such as sending the form contents via email or posting to a webhook.
+        This is a demonstration of the Aerobatic keyword-search plugin which provides full-text search capabilities for your static website.
       </p>
       <p>
-        Forms are required to have a <a href="https://www.google.com/recaptcha/intro/">ReCAPTCHA</a> for spam prevention. The Aerobatic server will validate the recaptcha code with Google behind the scenes.
-      </p>
-      <p>
-        Read the <a href="https://www.aerobatic.com/docs/plugins/form-submit/">full documentation</a> or view the <a href="https://github.com/aerobatic/form-submit-demo">source code</a> for this demo.
+        Read the <a href="https://www.aerobatic.com/docs/plugins/keyword-search/">full documentation</a> or view the <a href="https://github.com/aerobatic/keyword-search-demo">source code</a> for this demo.
       </p>
     </div>
 
@@ -59,12 +54,16 @@
     <div class="docs-section examples" id="examples">
       <h6 class="docs-header">Example</h6>
       <div class="row example">
-          <p>There are different ways to use the plugin &mdash; a standard form that POSTs the whole page and redirects to a URL of your choosing, or you can use JavaScript and AJAX to post the form and stay on the same page.</p>
-          <p>
-            <a class="button button-primary" href="/standard-form.html" role="button">Standard form</a>
-            <a class="button button-primary" href="/ajax-form.html" role="button">AJAX form</a>
+          <p>This website has several pages of classic poems courtesy of <a href="https://www.gutenberg.org/">Project Gutenberg</a>. Here's a few suggested search terms to try out:
+            <ul>
+              <li><i>The Raven</i></li>
+              <li><i>Edgar Allan Poe</i></li>
+            </ul>
           </p>
-          <p>To implement the form-submit plugin in your website, see the Aerobatic <a href="https://www.aerobatic.com/docs/plugins/form-submit/">documentation</a>.</p>
+          <form method="GET" action="/search">
+            <input class="u-full-width" type="text" required name="q">
+            <button class="button-primary" type="submit">Search</button>
+          </form>
       </div>
     </div>
   </div>

@@ -1,7 +1,7 @@
 {
-  "name": "form-submit-demo",
+  "name": "keyword-search-demo",
   "version": "1.0.0",
-  "description": "Demo of the Aerobatic form-submit plugin",
+  "description": "Demo of the Aerobatic keyword-search plugin",
   "private": true,
   "scripts": {
     "start": "hs . -c-1 -p 8080",
