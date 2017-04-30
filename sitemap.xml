@@ -4,4 +4,12 @@
     <loc>https://keyword-search-demo.aerobatic.io/poets/edgar-allan-poe</loc>
     <lastmod>1849-10-07T00:00:00+00:00</lastmod>
   </url>
+  <url>
+    <loc>https://keyword-search-demo.aerobatic.io/poets/robert-burns</loc>
+    <lastmod>1796-07-21T00:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://keyword-search-demo.aerobatic.io/poets/emily-dickinson</loc>
+    <lastmod>1886-05-15T00:00:00+00:00</lastmod>
+  </url>
 </urlset>
