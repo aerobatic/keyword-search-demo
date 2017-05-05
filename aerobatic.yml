@@ -6,7 +6,9 @@ plugins:
   - name: keyword-search
     path: /search
     method: get
+    options:
+      resultsTemplate: search-template.html
+
   - name: webpage
 scanner:
-  keywordSearch:
-    siteMapPath: /sitemap
+  keywordSearch: {}

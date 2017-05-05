@@ -23,6 +23,36 @@
   <link rel="stylesheet" href="/css/skeleton.css">
   <link rel="stylesheet" href="/css/custom.css">
 
+  <style>
+    .search-result {
+      margin-bottom: 15px;
+    }
+    
+    .search-result cite {
+      display: block;
+      font-style: normal;
+      color: darkgreen;
+    }
+
+    .search-result h3 {
+      font-size: 2.4rem;
+      margin-bottom: 8px;
+    }
+
+    .search-result h3 > a {
+      text-decoration: none;
+    }
+
+    .search-result h3 > a:hover {
+      text-decoration: underline;
+    }
+
+    .search-result .snippet em {
+      font-style: normal;
+      font-weight: 600;
+    }
+  </style>
+
   <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 </head>
 <body class="code-snippets-visible">
@@ -37,28 +67,37 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <div class="container">
     <section class="header">
-      <h1 class="title">Keyword Search Demo</h1>
+      <h1 class="title">Keyword Search Demo - Results</h1>
     </section>
 
     <!-- Why use Skeleton -->
     <div class="docs-section" id="intro">
       <p>
-        This is a demonstration of the Aerobatic keyword-search plugin which provides full-text search capabilities for your static website.
-      </p>
-      <p>
-        Read the <a href="https://www.aerobatic.com/docs/plugins/keyword-search/">full documentation</a> or view the <a href="https://github.com/aerobatic/keyword-search-demo">source code</a> for this demo.
+        This is a custom search results template. See <a href="https://github.com/aerobatic/keyword-search-demo">source code</a>.
       </p>
     </div>
 
     <!-- Example -->
     <div class="docs-section examples" id="examples">
-      <h6 class="docs-header">Example</h6>
-      <div class="row example">
-          <p>This website has several pages of classic poems courtesy of <a href="https://www.gutenberg.org/">Project Gutenberg</a>. Try searching for "raven":</p>
-          <form method="GET" action="/search">
-            <input class="u-full-width" type="text" required name="q">
-            <button class="button-primary" type="submit">Search</button>
-          </form>
+      <form method="GET" action="/search">
+        <input class="u-full-width" type="text" required name="q" value="{{{searchTerm}}}">
+        <button class="button-primary" type="submit">Search</button>
+      </form>
+
+      <div class="search-results">
+        {{#searchResults}}
+          <div class="search-result">
+            <h3><a href="{{{urlPath}}}">{{title}}</a></h3>
+            <cite>{{fullUrl}}</cite>
+            {{#snippet}}
+            <span class="snippet">{{#date}}{{date}} - {{/date}}{{{snippet}}}<span class="ellipsis">...</span></span>
+            {{/snippet}}
+          </div>
+        {{/searchResults}}
+
+        {{#zeroResults}}
+          <h4>No results</h4>
+        {{/zeroResults}}
       </div>
     </div>
   </div>
