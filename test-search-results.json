@@ -1,0 +1,13 @@
+{
+  "searchTerm": "precious",
+  "searchResults": [
+    {
+      "date": "May 15, 1886",
+      "fullUrl": "https://keyword-search-demo.aerobatic.io/poets/emily-dickinson",
+      "score": 0.161435249475056,
+      "snippet": "A <em>precious</em>, mouldering pleasure 't is\nTo meet an antique book,\nIn just the dress his century wore;\nA privilege, I think,\n\nHis venerable hand to take,\n",
+      "title": "Emily Dickinson",
+      "urlPath": "/poets/emily-dickinson"
+    }
+  ]
+}
