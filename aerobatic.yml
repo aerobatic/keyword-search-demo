@@ -1,4 +1,4 @@
-id: d20dc26e-675d-4f94-ac26-fd92c2b5644d
+id: d777e2b7-1c0a-4045-8a48-fd9ca0934d6c
 deploy:
   ignore: []
   directory: .
@@ -6,9 +6,6 @@ plugins:
   - name: keyword-search
     path: /search
     method: get
-    options:
-      resultsTemplate: search-template.html
-
   - name: webpage
 scanner:
   keywordSearch: {}
